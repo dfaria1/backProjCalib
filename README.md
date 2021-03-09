@@ -16,7 +16,7 @@ O JWT é um padrão (RFC-7519) de mercado que define como transmitir e armazenar
 O processo que iremos criar nesta API é composto de diversos passos que podem ser resumidos na figura a seguir:
 
 
-![Alt Text](https://thepracticaldev.s3.amazonaws.com/i/k2vi3g73qy12ebznxqzs.png)
+
 
 
 ----
@@ -39,23 +39,25 @@ Express é um framework para `nodejs`. Ele é minimalista, flexível e contém u
 Para validar o corpo dos dados no servidor, dentro do framework express, será utilizado esta biblioteca.
 Ela permite uma validação no lado do servidor. Dessa forma, se o usuário desabilitar a validação no lado cliente, faremos essa validação no lado servidor e exibiremos um erro.
 
-
-4. **bcryptjs**
+3. **bcryptjs**
 Esta biblioteca será utilizada para efetuarmos o hash da senha e assim podermos armazená-la no MongoDB. Dessa maneira, mesmo os usuários administradores não terão acesso a conta do usuário.
 
+4. **jsonwebtoken**
+** jsonwebtoken ** será usado para criptografar nossa senha e retornar um token. 
+Poderemos usar esse ** token ** para nos autenticar nas páginas seguras da nossa aplicação.  
 
-5. **jsonwebtoken**
-**jsonwebtoken** will be used to encrypt our data payload on registration and return a token. We can use that **token** to authenticate ourselves to secured pages like the dashboard. There would also an option to set the validity of those token, so you can specify how much time that token will last. 
-
-6. **mongoose**
-Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
+5. **mongoose**
+Mongoose é o nosso framework para integrar com o MongoDB.
+Por questões de compatibilidade, utilizaremos a versão 5.11.15, instalando da seguinte forma:
+```
 npm i mongoose@5.11.15
+```
 
-7. **nodemon**
+6. **nodemon**
 O nodemon é uma daquelas ferramentas de grande utilidade para quem trabalha com `nodejs`
-Basicamente ele é um file watcher que roda internamente o próprio comando **node**. A diferença entre usá-lo ou usar o comando **node** é que ele faz auto-restart da aplicação, toda vez que um arquivo do projeto for modificado.
+Basicamente ele é um _file watcher_ que roda internamente o próprio comando **node**. A diferença entre usá-lo ou usar o comando **node** é que ele faz auto-restart da aplicação, toda vez que um arquivo do projeto for modificado.
 
-8. **dotenv**
+7. **dotenv**
 O **dotenv** permite a criação de variáveis de ambiente. 
 Ele é um módulo de dependência que carrega variáveis de ambiente de um arquivo .env para process.env.
 As variáveis de ambiente ajudam a definir valores que não queremos codificar diretamente em nosso código fonte.
@@ -63,7 +65,7 @@ As variáveis de ambiente ajudam a definir valores que não queremos codificar d
 
 ### 4. Inicializando o projeto
 
-Para iniciar este projeto, utilizaremos o nodemon (ele efetua o hot reload)
+Para iniciar este projeto, utilizaremos o nodemon (ele efetua o _hot reload_)
 
 
 ```
@@ -72,8 +74,4 @@ nodemon
 
 ```
 
-Renomeie o arquivo .env-exemplo para .env e informe a sua string de conexão do MongoDb.
-
-**Código baseado no seguinte artigo** : 
-
-https://dev.to/dipakkr/implementing-authentication-in-nodejs-with-express-and-jwt-codelab-1-j5i
+Renomeie o arquivo .env-exemplo para .env e informe a sua string de conexão do MongoDb e as demais informações necessárias.
