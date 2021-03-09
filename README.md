@@ -13,12 +13,6 @@
 
 O JWT é um padrão (RFC-7519) de mercado que define como transmitir e armazenar objetos JSON de forma compacta e segura entre diferentes aplicações. Os dados nele contidos podem ser validados a qualquer momento pois o token é assinado digitalmente.
 
-O processo que iremos criar nesta API é composto de diversos passos que podem ser resumidos na figura a seguir:
-
-
-
-
-
 ----
 ### 2. Pré Requisitos
 Você deve ter algum conhecimento básico em `javascript`, `nodejs` e `ES6`. 
@@ -27,7 +21,6 @@ Obrigatoriamente o **nodejs** deve estar instalado no seu sistema.
 ----
 
 ### 3. Pacotes necessários
-
 
 Serão necessários os seguintes pacotes, que poderão ser instalados via npm.
 
@@ -75,3 +68,8 @@ nodemon
 ```
 
 Renomeie o arquivo .env-exemplo para .env e informe a sua string de conexão do MongoDb e as demais informações necessárias.
+
+## Licença
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Apoie o software livre! 🐧
