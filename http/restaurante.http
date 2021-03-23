@@ -24,7 +24,7 @@ Content-Type: application/json
 {
   "nome" : "Restaurante dos Meninos",
   "status" : "ativo",
-  "foto": "images.nasi_lemak", 
+  "foto": "", 
   "notaMedia" : 4.5,
   "categoria" :"6059da945784c26f8232ddb2",
   "faixaPreco" : "barato",
