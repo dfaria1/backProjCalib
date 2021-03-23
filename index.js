@@ -6,6 +6,8 @@ const InicializaMongoServer = require("./config/db")
 const rotasUsuario = require("./routes/Usuario")
 const rotasGrupo = require('./routes/Grupo')
 const rotasProduto = require('./routes/Produto')
+const rotasCategoria = require('./routes/Categoria')
+const rotasRestaurante = require('./routes/Restaurante')
 
 // Inicializamos o servidor MongoDb
 InicializaMongoServer();
@@ -46,6 +48,10 @@ app.use("/usuarios", rotasUsuario)
 app.use("/grupos", rotasGrupo)
 /* Rotas do Produto */
 app.use("/produtos", rotasProduto)
+/* Rotas da Categoria */
+app.use("/categorias", rotasCategoria)
+/* Rotas do Restaurante */
+app.use("/restaurantes", rotasRestaurante)
 
 /* A rota para tratar o erro 404 deve obrigatoriamente ser a última */
 app.use(function(req, res, next) {

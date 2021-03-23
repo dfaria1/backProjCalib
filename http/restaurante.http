@@ -1,0 +1,69 @@
+//Testar as requisições - Schema Restaurante
+//Bye, Bye Postman :) (Mas claro, ainda dá para utilizá-lo se preferir)
+//Instale a extensão REST Client no Visual Studio Code para conseguir utilizar este recurso
+
+@baseUrl = http://localhost:4000
+@id = 604787c65e1a4608df2b782a
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjA0NzZkMWE0ZDk0MDgwNDUwM2M5NTk4In0sImlhdCI6MTYxNTI5MzcyMiwiZXhwIjoxNjE1MzI5NzIyfQ.zLK2BHsSXDvCOoIfW_rXTej5pYxD_aSRV5q473iPiOc
+
+###
+// GET Todos os restaurantes
+GET {{baseUrl}}/restaurantes
+Content-Type: application/json
+
+###
+// GET Retorna um restaurante pelo ID
+GET {{baseUrl}}/restaurantes/{{id}}
+Content-Type: application/json
+
+###
+// POST Novo Restaurante
+POST {{baseUrl}}/restaurantes
+Content-Type: application/json
+
+{
+  "nome" : "Restaurante dos Meninos",
+  "status" : "ativo",
+  "foto": "images.nasi_lemak", 
+  "notaMedia" : 4.5,
+  "categoria" :"6059da945784c26f8232ddb2",
+  "faixaPreco" : "barato",
+  "tempoEntrega" : "45 a 60min",
+  "telefone": "(11)4013-1768",
+  "endereco": {
+    "logradouro": "Praça da Independência, 224",
+    "bairro": "Centro",
+    "cep": "13300000",
+    "municipio": "Itu",
+    "estado": "SP",
+    "complemento": "" 
+  },
+  "geoLocalizacao": {
+      "latitude" : -23.265370,
+      "longitude": -47.298160
+  }
+}
+
+###
+// DELETE Remove Restaurante
+DELETE {{baseUrl}}/restaurantes/{{id}}
+Content-Type: application/json
+access-token: {{token}}
+
+###
+// PUT Edita Restaurante
+PUT {{baseUrl}}/restaurantes
+Content-Type: application/json
+access-token: {{token}}
+
+{
+    "_id": "60477975c0e5740660e4074bd",
+    "codigo": "1234567890124",
+    "nome": "Feijão Preto",  
+    "preco": 9.90,
+    "validade": "2021-12-13",
+    "descricao": "Feijão Preto Tipo 2 marca Camil", 
+    "inativo": false,
+    "unidade": "Kg",
+    "grupo": "604786f883fbe0089651095a"
+}
