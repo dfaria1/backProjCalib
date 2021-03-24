@@ -9,6 +9,7 @@ const rotasProduto = require('./routes/Produto')
 const rotasCategoria = require('./routes/Categoria')
 const rotasRestaurante = require('./routes/Restaurante')
 const rotasCardapio = require('./routes/Cardapio')
+const rotasUpload = require('./routes/Upload')
 
 // Inicializamos o servidor MongoDb
 InicializaMongoServer();
@@ -17,6 +18,7 @@ const app = express();
 
 // Porta Default
 const PORT = process.env.PORT || 4000;
+
 
 
 // Exemplo de Middleware 
@@ -55,6 +57,10 @@ app.use("/categorias", rotasCategoria)
 app.use("/restaurantes", rotasRestaurante)
 /* Rotas do Cardápio */
 app.use("/cardapios", rotasCardapio)
+/* Rotas de Upload */
+app.use("/upload", rotasUpload)
+/* Rotas do conteúdo público */
+app.use('/public', express.static('public'))
 
 /* A rota para tratar o erro 404 deve obrigatoriamente ser a última */
 app.use(function(req, res, next) {

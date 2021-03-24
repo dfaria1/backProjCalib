@@ -30,7 +30,8 @@ npm init
 
 Serão necessários os seguintes pacotes, que poderão ser instalados via npm.
 ```
- npm i express express-validator bcryptjs jsonwebtoken mongoose@5.11.15 nodemon dotenv
+ npm i express express-validator bcryptjs jsonwebtoken mongoose@5.11.15 dotenv multer
+ npm i -g nodemon
 ```
 
 1. **express**
@@ -63,6 +64,9 @@ Basicamente ele é um _file watcher_ que roda internamente o próprio comando **
 O **dotenv** permite a criação de variáveis de ambiente. 
 Ele é um módulo de dependência que carrega variáveis de ambiente de um arquivo .env para process.env.
 As variáveis de ambiente ajudam a definir valores que não queremos codificar diretamente em nosso código fonte.
+
+8. **multer**
+O **multer**  é um middleware para express.js que facilita receber arquivos binários nas requisições.
 ----
 
 ### 4. Inicializando o projeto

@@ -18,9 +18,12 @@
     "express-validator": "^6.10.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.15",
-    "nodemon": "^2.0.7"
+    "multer": "^1.4.2"
   },
   "engines": {
     "node": "10.x"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
