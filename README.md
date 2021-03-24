@@ -18,11 +18,20 @@ O JWT é um padrão (RFC-7519) de mercado que define como transmitir e armazenar
 Você deve ter algum conhecimento básico em `javascript`, `nodejs` e `ES6`. 
 Obrigatoriamente o **nodejs** deve estar instalado no seu sistema. 
 
+```
+mkdir nomeprojeto
+cd nomeprojeto
+npm init
+```
+
 ----
 
 ### 3. Pacotes necessários
 
 Serão necessários os seguintes pacotes, que poderão ser instalados via npm.
+```
+ npm i express express-validator bcryptjs jsonwebtoken mongoose@5.11.15 nodemon dotenv
+```
 
 1. **express**
 Express é um framework para `nodejs`. Ele é minimalista, flexível e contém um robusto conjunto de recursos para desenvolver aplicações web, como um sistema de Views intuitivo (MVC), um robusto sistema de roteamento, um executável para geração de aplicações e muito mais.

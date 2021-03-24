@@ -46,7 +46,7 @@ router.get("/:id", auth, async (req, res) => {
 router.get("/categoria/:id",  async (req, res) => {
     Restaurante.find({"categoria":req.params.id})
     .sort({ nome: 1 })
-    .populate("categoria", "nome")
+    .populate("categoria", "nome")  
         .then(restaurante => {
             res.send(restaurante);
         }).catch(err => {
