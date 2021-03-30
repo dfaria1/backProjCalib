@@ -11,9 +11,10 @@ const upload = multer({
 * Processo de Upload
 *################################################ */
 router.post("/", upload.array('file'), async (req, res) => {
-    console.log(`Arquivos recebidos: ${req.files.length}`);
+    console.log(`Arquivos recebidos: ${req.files.length}`)
+    const statusUpload = req.files.length > 0 ? true : false
     res.send({
-      upload: true,
+      upload: statusUpload,
       files: req.files,
     })
   })
