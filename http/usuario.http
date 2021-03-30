@@ -18,8 +18,8 @@ POST {{baseUrl}}/usuarios/login
 Content-Type: application/json
 
 {
-    "email": "ariano@suassuna.com.br",
-    "senha": "joaogrilo"
+    "email": "ariano@s.com.br",
+    "senha": "ariano"
 }
 
 ###
@@ -29,7 +29,7 @@ Content-Type: application/json
 
 {
 "nome": "Ariano Suassuna",
-"email": "ariano6@suassuna.com.br",
-"senha": "joaogrilo",
+"email": "ariano@s.com.br",
+"senha": "ariano",
 "tipo": "admin"
 }
