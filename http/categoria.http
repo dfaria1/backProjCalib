@@ -23,8 +23,16 @@ access-token: {{token}}
 
 {
     "nome": "Marmitas",  
-    "status": "ativo"
+    "status": "ativo",
+    "foto": 
+        {
+            ​"mimetype": "image/png",
+            ​"originalname": "marmita.png",
+            "path": "public/uploads/ad716fecee6fa158ba83d1b36c5779f5",​
+            "size": 560961
+        }
 }
+
 
 ###
 // DELETE Remove Categoria
