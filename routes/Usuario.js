@@ -3,6 +3,7 @@ const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
+const auth = require("../middleware/auth");
 
 const Usuario = require("../model/Usuario");
 
@@ -178,6 +179,22 @@ router.post("/access-token",  async (req, res) => {
     }
   } catch (e) {
     res.send(`Erro ao obter o token do usuário: ${e.message}`);
+  }
+});
+
+/**
+ * @method - GET
+ * @description - Obter informações do usuário atual
+ * @param - /usuario/eu
+ */
+
+ router.get("/eu", auth, async (req, res) => {
+  try {
+    // auth garantirá que foi enviado o token.
+    const usuario = await Usuario.findById(req.usuario.id, {senha: 0, criado_em: 0, alterado_em:0, __v:0});
+    res.json(usuario);
+  } catch (e) {
+    res.send( `Erro ao obter os dados do usuário: ${e.message}` );
   }
 });
 

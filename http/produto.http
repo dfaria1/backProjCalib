@@ -3,8 +3,8 @@
 //Instale a extensão REST Client no Visual Studio Code para conseguir utilizar este recurso
 
 @baseUrl = http://localhost:4000
-@id = 604787c65e1a4608df2b782a
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjA0NzZkMWE0ZDk0MDgwNDUwM2M5NTk4In0sImlhdCI6MTYxNTI5MzcyMiwiZXhwIjoxNjE1MzI5NzIyfQ.zLK2BHsSXDvCOoIfW_rXTej5pYxD_aSRV5q473iPiOc
+@id = 612832a8ddec592064f4bf7c
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjEyODIzMzExOGNjMjI0NGJjNDQ2MDU4In0sImlhdCI6MTYzMDAyMDQwMSwiZXhwIjoxNjMwMDU2NDAxfQ.eS6xSmMy67a_cKoEyS3-WeYj3c5gdeWY4zn9yVJcVqQ
 
 ###
 // GET Todos os produtos

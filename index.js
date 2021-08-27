@@ -10,8 +10,10 @@ const rotasCategoria = require('./routes/Categoria')
 const rotasRestaurante = require('./routes/Restaurante')
 const rotasCardapio = require('./routes/Cardapio')
 const rotasUpload = require('./routes/Upload')
+const rotasPessoa = require('./routes/Pessoas')
+//const Pessoas = require('./model/Pessoas')
 
-// Inicializamos o servidor MongoDb
+// Inicializamos o servidor MongoDb. Realizamos esta inicialização primeiro pois é externa e demora mais e é realizada de forma assíncrona
 InicializaMongoServer();
 
 const app = express();
@@ -61,6 +63,8 @@ app.use("/cardapios", rotasCardapio)
 app.use("/upload", rotasUpload)
 /* Rotas do conteúdo público */
 app.use('/public', express.static('public'))
+/* Rotas da Pessoa */
+app.use("/pessoas", rotasPessoa)
 
 /* A rota para tratar o erro 404 deve obrigatoriamente ser a última */
 app.use(function(req, res, next) {
