@@ -4,7 +4,7 @@
 
 @baseUrl = http://localhost:4000
 @id = 612835bb365a9c0214dad5aa
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjEyODIzMzExOGNjMjI0NGJjNDQ2MDU4In0sImlhdCI6MTYzMDAyMTUyNCwiZXhwIjoxNjMwMDU3NTI0fQ.N93FiRO9Xz8wmbfcqhB_71l0FUbpj9DyfnO9GTmpltU
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjEyODIzMzExOGNjMjI0NGJjNDQ2MDU4In0sImlhdCI6MTYzMDk2MTA3NCwiZXhwIjoxNjMwOTk3MDc0fQ.yMA9E1LCY9eeCt7cMskWinqqe4Vlr1nt6m6BfPzB25Q
 
 ###
 // GET Todas as pessoas
@@ -18,6 +18,61 @@ GET {{baseUrl}}/pessoas/{{id}}
 Content-Type: application/json
 access-token: {{token}}
 
+
+###
+// GET Retorna um equipamento pelo ID
+GET {{baseUrl}}/pessoas/equipamento/{{id}}
+Content-Type: application/json
+access-token: {{token}}
+
+{
+    "_id": "61339f7a27d328f6c25bff14"
+}
+
+###
+// PUT Edita Equipamento
+//_id abaixo se refere ao ID DO EQUIPAMENTO
+PUT {{baseUrl}}/pessoas/equipamento
+Content-Type: application/json
+access-token: {{token}}
+
+{
+    "_id": "61339f7a27d328f6c25bff14",
+    "nSerie": "123",
+    "marca": "Toledo",
+    "modelo": "3400",
+    "tipo": "Eletrônica",
+    "capacidade": "10000",
+    "divisao": "2",
+    "cargaMin": "40",
+    "casasDecimais": "0",
+    "unidade": "g",
+    "tag": "BAL-001",
+    "local": "Produção"
+}
+
+###
+// PUT Adiciona novo Equipamento
+//_id abaixo se refere ao ID DA PESSOA PROPRIETÁRIA DO EQUIPAMENTO
+PUT {{baseUrl}}/pessoas/equipamento/novo
+Content-Type: application/json
+access-token: {{token}}
+
+{
+    "_id": "612835bb365a9c0214dad5aa",
+    "nSerie": "156",
+    "marca": "Marte",
+    "modelo": "AD5002",
+    "tipo": "Eletrônica",
+    "capacidade": "5000",
+    "divisao": "0,01",
+    "cargaMin": "0,5",
+    "casasDecimais": "2",
+    "unidade": "g",
+    "tag": "BAL-001",
+    "local": "Produção"
+}
+
 ###
 // POST Nova pessoa
 POST {{baseUrl}}/pessoas
@@ -25,18 +80,18 @@ Content-Type: application/json
 access-token: {{token}}
 
 {
-    "razaoSocial": "Empresa XYZ Ltda",
-    "cnpj": "11.222.333/0001-44",  
-    "logradouro": "Avenida Principal",
-    "numeroLogradouro": "1000",
+    "razaoSocial": "Empresa ABC Ltda",
+    "cnpj": "22.333.444/0001-55",  
+    "logradouro": "Avenida Paralela",
+    "numeroLogradouro": "2000",
     "complemento": "", 
     "bairro": "Distrito Industrial",
     "cep": "13300-000",
     "cidade": "Itu",
     "uf": "SP",
-    "email": "carlos@empresaxyz.com.br",
-    "telefone": "(11) 2222-3333",
-    "contato": "Carlos Silva",
+    "email": "maria@empresaabc.com.br",
+    "telefone": "(11) 4444-5555",
+    "contato": "Maria Andrade",
     "fornecedor": false,
     "inativo": false
 }
@@ -54,7 +109,7 @@ Content-Type: application/json
 access-token: {{token}}
 
 {
-    "_id": "60477975c0e5740660e4074bd",
+    "_id": "612835bb365a9c0214dad5aa",
     "razaoSocial": "Empresa XYZ Ltda",
     "cnpj": "11.222.333/0001-44",  
     "logradouro": "Avenida Principal",
