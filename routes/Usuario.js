@@ -188,7 +188,7 @@ router.post("/access-token",  async (req, res) => {
  * @param - /usuario/eu
  */
 
- router.get("/eu", auth, async (req, res) => {
+ router.get("/me", auth, async (req, res) => {
   try {
     // auth garantirá que foi enviado o token.
     const usuario = await Usuario.findById(req.usuario.id, {senha: 0, criado_em: 0, alterado_em:0, __v:0});
