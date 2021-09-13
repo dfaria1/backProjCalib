@@ -10,7 +10,7 @@ POST {{baseUrl}}/usuarios/access-token
 Content-Type: application/json
 
 {
-"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjEyODIzMzExOGNjMjI0NGJjNDQ2MDU4In0sImlhdCI6MTYzMDkyNDk0MywiZXhwIjoxNjMwOTYwOTQzfQ.CYnfVdidbXVn6dLiqa4HtskljOvxqkaC50bdyv9Nmhg"					
+"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjEyODIzMzExOGNjMjI0NGJjNDQ2MDU4In0sImlhdCI6MTYzMTQ2NDkxNCwiZXhwIjoxNjMxNTAwOTE0fQ.ARgUlFtyNJJG9DBr4Xv1YXwRk0wqc_dKsqy_qhXBXJo"					
 }
 ###
 // POST Login Usuário
